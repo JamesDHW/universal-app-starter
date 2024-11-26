@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React Native",
+  "extends": "./base",
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react-native",
+    "lib": ["DOM", "ESNext"],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "moduleSuffixes": [".native", ".web", ""]
+  },
+  "exclude": ["node_modules", "dist"]
+
+}
