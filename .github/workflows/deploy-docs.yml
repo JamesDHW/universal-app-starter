@@ -19,15 +19,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      # Setup Node.js and explicitly install pnpm
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+      # Reuse the centralized setup workflow
+      - name: Setup Node.js and pnpm
+        uses: ./tools/workflows/setup-node.yml
 
       # Install dependencies and build the site
       - name: Install dependencies
