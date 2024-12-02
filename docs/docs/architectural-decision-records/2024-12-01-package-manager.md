@@ -1,4 +1,4 @@
-# Package Manager (pnpm)
+# ADR(2024-12-01): Package Manager (pnpm)
 
 ## ⚠️ Problem
 

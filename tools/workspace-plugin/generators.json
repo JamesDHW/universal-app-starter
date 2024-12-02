@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "add-adr": {
+      "factory": "./src/generators/add-adr/generator",
+      "schema": "./src/generators/add-adr/schema.json",
+      "description": "add-adr generator"
+    }
+  }
+}

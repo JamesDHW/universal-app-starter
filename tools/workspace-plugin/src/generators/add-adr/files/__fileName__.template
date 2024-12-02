@@ -1,6 +1,4 @@
-# ADR(2024-12-01): Monorepo (NX)
-
-This ADR was informed by [monorepo.tools](https://monorepo.tools/).
+# ADR: <%= decisionName %> <%= today %>
 
 ## ⚠️ Problem
 
@@ -12,9 +10,9 @@ This ADR was informed by [monorepo.tools](https://monorepo.tools/).
 
 ## ⚙️ Options
 
-- **Option 1:** [Nx](https://nx.dev/)
-- **Option 2:** [Turbo](https://turbo.build/)
-- **Option 3:** [(pnpm) Workspaces](https://pnpm.io/workspaces)
+- **Option 1:**
+- **Option 2:**
+- **Option 3:**
 
 ## ✅ Evaluation
 
@@ -26,8 +24,4 @@ This ADR was informed by [monorepo.tools](https://monorepo.tools/).
 
 ## 🌳 Decision
 
-Use [Nx](https://nx.dev/).
-
 ## 🚨 Consequences
-
-Additional complexity to configure certain features.

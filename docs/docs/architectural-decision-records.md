@@ -58,9 +58,7 @@
 
 Contributing to the ADRs is simple! Follow these steps to add a new ADR:
 
-1. **Create a New File**: Navigate to the `docs/architectural-decision-records` folder in the repository.
-   Name your file using the following format: `YYYY-MM-DD-decision-name.md`
-   For example, if you are documenting a decision made on January 15, 2024, regarding the choice of a database, you might name the file: `2024-01-15-database.md`.
+1. **Start a new ADR**: Run `pnpm nx g tools/workspace-plugin:add-adr`, which will scaffold a new ADR file in the `docs/docs/architectural-decision-records` folder.
 
 2. **Submit a Pull Request**: Once you have created your ADR file, submit a pull request to the repository. Ensure that your changes are well-documented and follow the project's contribution guidelines.
 
@@ -68,32 +66,4 @@ Contributing to the ADRs is simple! Follow these steps to add a new ADR:
 
 ## Suggested Template
 
-```markdown
-# Title
-
-## ⚠️ Problem
-
-## 💯 Critical Performances
-
-- **Performance 1:**
-- **Performance 2:**
-- **Performance 3:**
-
-## ⚙️ Options
-
-- **Option 1:**
-- **Option 2:**
-- **Option 3:**
-
-## ✅ Evaluation
-
-|                            | **Option 1**        | **Option 2**        | **Option 3**        |
-| -------------------------- | ------------------- | ------------------- | ------------------- |
-| **Critical Performance 1** | ✅ ✅ [explanation] | ❌ [explanation]    | ✅ [explanation]    |
-| **Critical Performance 2** | ❌ [explanation]    | ✅ ✅ [explanation] | ✅ ✅ [explanation] |
-| **Critical Performance 3** | ❌ [explanation]    | ⚠️ [explanation]    | ❌ [explanation]c   |
-
-## 🌳 Decision
-
-## 🚨 Consequences
-```
+See the [template](../tools/workspace-plugin/src/generators/add-adr/files/__fileName__.template) for more information.
