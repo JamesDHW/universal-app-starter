@@ -1,3 +1,1 @@
 # Design System Components
-
-## Components

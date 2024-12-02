@@ -66,4 +66,4 @@ Contributing to the ADRs is simple! Follow these steps to add a new ADR:
 
 ## Suggested Template
 
-See the [template](../tools/workspace-plugin/src/generators/add-adr/files/__fileName__.template) for more information.
+See the template at `/tools/workspace-plugin/src/generators/add-adr/files/__fileName__.template` for more information.

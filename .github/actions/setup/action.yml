@@ -1,0 +1,23 @@
+name: Checkout codebase and install pnpm and node
+description: installs yarn dependencies with caching
+inputs:
+  node_version:
+    description: Node.js version override
+    required: false
+    type: string
+    default: '20'
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 9
+        run_install: false
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node_version }}
+        cache: pnpm

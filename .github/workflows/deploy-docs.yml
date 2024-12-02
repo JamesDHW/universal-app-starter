@@ -21,7 +21,7 @@ jobs:
 
       # Reuse the centralized setup workflow
       - name: Setup Node.js and pnpm
-        uses: ./tools/workflows/setup-node.yml
+        uses: ./.github/actions/setup
 
       # Install dependencies and build the site
       - name: Install dependencies
