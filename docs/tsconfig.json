@@ -1,8 +1,9 @@
 {
-  // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@config/tsconfig/base",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"]
   },
   "exclude": [".docusaurus", "build"]
 }

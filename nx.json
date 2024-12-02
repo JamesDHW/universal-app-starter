@@ -5,7 +5,44 @@
     "production": ["default"],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "6743a8d62c2cb523917336ce",
+  "targetDefaults": {
+    "build": {
+      "inputs": ["production", "^production"],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "test": {
+      "inputs": ["default", "^default"]
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "typecheck": {
+      "inputs": ["default", "{workspaceRoot}/tsconfig.base.json"]
+    }
+  },
+  "projects": {
+    "@app/expo": {
+      "tags": ["type:app", "platform:expo"]
+    },
+    "@app/next": {
+      "tags": ["type:app", "platform:next"]
+    },
+    "@config/tsconfig": {
+      "tags": ["type:config"]
+    },
+    "@client/core": {
+      "tags": ["type:lib", "scope:client"]
+    },
+    "@client/ui": {
+      "tags": ["type:lib", "scope:client"]
+    },
+    "@client/navigation": {
+      "tags": ["type:lib", "scope:client", "category:common"]
+    },
+    "@client/translation": {
+      "tags": ["type:lib", "scope:client", "category:common"]
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -19,5 +56,16 @@
         }
       }
     }
-  ]
+  ],
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "typecheck"],
+        "parallel": true
+      }
+    }
+  },
+  "packageManager": "pnpm",
+  "targetName": "typecheck"
 }

@@ -1,0 +1,52 @@
+{
+  "workspaces": {
+    "apps": {
+      "match": "^apps/.*",
+      "colors": {
+        "activityBar.background": "#F8333C"
+      }
+    },
+    "expo": {
+      "match": "^apps/expo/.*",
+      "colors": {
+        "activityBar.background": "#1E90FF"
+      }
+    },
+    "next": {
+      "match": "^apps/next/.*",
+      "colors": {
+        "activityBar.background": "#1E90FF"
+      }
+    },
+    "docs": {
+      "match": "^docs/.*",
+      "colors": {
+        "activityBar.background": "#44AF69"
+      }
+    },
+    "packages": {
+      "match": "^packages/.*",
+      "colors": {
+        "activityBar.background": "#33658A"
+      }
+    },
+    "common": {
+      "match": "^packages/common/.*",
+      "colors": {
+        "activityBar.background": "#1E90FF"
+      }
+    },
+    "core": {
+      "match": "^packages/core/.*",
+      "colors": {
+        "activityBar.background": "#86BBD8"
+      }
+    },
+    "ui": {
+      "match": "^packages/ui/.*",
+      "colors": {
+        "activityBar.background": "#1E90FF"
+      }
+    }
+  }
+}
