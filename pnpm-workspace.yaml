@@ -3,4 +3,5 @@ packages:
   - 'docs'
   - 'packages/client/*'
   - 'packages/client/common/*'
+  - 'packages/client/config/*'
   - 'packages/shared/config/*'

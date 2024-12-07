@@ -1,5 +1,8 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import Image from 'next/image';
+import styles from './page.module.css';
+import { Button } from '@client/ui';
 
 export default function Home() {
   return (
@@ -19,6 +22,10 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        {/* 
+        @ts-expect-error: TODO use consistent react versions */}
+        <Button label="Click me" onClick={() => {}} />
 
         <div className={styles.ctas}>
           <a
