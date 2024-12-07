@@ -6,9 +6,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Install pnpm
-      - name: Install pnpm
-        run: npm install -g pnpm
+      # Reuse the centralized setup workflow
+      - name: Setup Node.js and pnpm
+        uses: ./.github/actions/setup
 
       # Other steps...
       - run: pnpm install --legacy-peer-deps
