@@ -115,17 +115,18 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'default',
-        path: 'docs',
+        path: '../../docs',
         routeBasePath: '/docs',
         include: ['**/*.md'],
         sidebarPath: './sidebars/docs.ts',
       },
     ],
+
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'appsDocs',
-        path: '../apps',
+        path: '..',
         routeBasePath: '/apps',
         include: ['**/docs.md', '**/README.md'],
         exclude: ['**/node_modules/**'],
@@ -137,7 +138,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'packagesDocs',
-        path: '../packages',
+        path: '../../packages',
         routeBasePath: '/packages',
         include: ['**/docs.md', '**/README.md'],
         exclude: ['**/node_modules/**'],

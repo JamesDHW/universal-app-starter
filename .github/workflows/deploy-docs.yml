@@ -26,17 +26,17 @@ jobs:
       # Install dependencies and build the site
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        working-directory: docs
+        working-directory: apps/docusaurus
 
       - name: Build website
         run: pnpm build
-        working-directory: docs
+        working-directory: apps/docusaurus
 
       # Upload the build artifact for deployment
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/build
+          path: apps/docusaurus/build
 
   deploy-docs:
     name: Deploy to GitHub Pages
