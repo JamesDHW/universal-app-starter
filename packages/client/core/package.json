@@ -5,6 +5,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "echo \"Error: no build specified\""
+    "build": "echo \"Error: no build specified\"",
+    "dev": "echo \"Error: no dev specified\""
   }
 }
