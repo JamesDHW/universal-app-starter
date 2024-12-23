@@ -283,6 +283,27 @@ importers:
         specifier: ^1.1.6
         version: 1.1.6(@babel/core@7.26.0)
 
+  packages/client/config/theme:
+    devDependencies:
+      '@babel/cli':
+        specifier: ^7.26.4
+        version: 7.26.4(@babel/core@7.26.0)
+      '@client/config-babel':
+        specifier: workspace:*
+        version: link:../babel
+      '@config/tsconfig':
+        specifier: workspace:*
+        version: link:../../../shared/config/tsconfig
+      '@types/react':
+        specifier: ^19.0.1
+        version: 19.0.2
+      concurrently:
+        specifier: ^9.1.0
+        version: 9.1.0
+      rm-rs:
+        specifier: ^0.2.3
+        version: 0.2.3
+
   packages/client/core: {}
 
   packages/shared/config/tsconfig: {}
