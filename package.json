@@ -1,10 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@universal-app/source",
+  "author": "James Haworth Wheatman",
   "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "private": true,
+  "scripts": {
+    "build": "nx run-many -t build --projects=@app/*",
+    "build:docusaurus": "nx build @app/docusaurus",
+    "build:expo": "nx build @app/expo",
+    "build:next": "nx build @app/next",
+    "dev": "nx run-many -t dev --projects=@app/*,@client/*",
+    "dev:docusaurus": "nx run-many -t dev --projects=@app/docusaurus,@client/*",
+    "dev:expo": "nx run-many -t dev --projects=@app/expo,@client/*",
+    "dev:next": "nx run-many -t dev --projects=@app/next,@client/*"
+  },
   "devDependencies": {
     "@config/tsconfig": "workspace:*",
     "@nx/js": "20.1.4",

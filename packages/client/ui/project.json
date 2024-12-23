@@ -1,0 +1,19 @@
+{
+  "name": "@client/ui",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run build",
+        "cwd": "packages/client/ui"
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["pnpm run dev:esm", "pnpm run dev:types"],
+        "cwd": "packages/client/ui"
+      }
+    }
+  }
+}

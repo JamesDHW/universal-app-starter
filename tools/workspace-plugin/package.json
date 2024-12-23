@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@universal-app/workspace-plugin",
-  "version": "0.0.1",
   "dependencies": {
     "@nx/devkit": "20.1.4"
   },

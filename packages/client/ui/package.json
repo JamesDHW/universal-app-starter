@@ -1,9 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@client/ui",
-  "description": "Shared universal components for the client",
-  "author": "James Haworth Wheatman",
-  "version": "1.0.0",
   "type": "module",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -17,15 +14,19 @@
   },
   "scripts": {
     "build": "pnpm build:clean && pnpm build:esm && pnpm build:types",
-    "build:clean": "rm -rf dist",
+    "build:clean": "rm-rs -r dist",
     "build:esm": "babel ./src --extensions .ts,.tsx --out-dir dist/esm --source-maps",
-    "build:types": "tsc --noEmit false --outDir dist/types --emitDeclarationOnly"
+    "build:types": "tsc --noEmit false --outDir dist/types --emitDeclarationOnly",
+    "dev:esm": "pnpm build:esm --watch",
+    "dev:types": "pnpm build:types --watch"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
     "@client/config-babel": "workspace:*",
     "@config/tsconfig": "workspace:*",
-    "@types/react": "^19.0.1"
+    "@types/react": "^19.0.1",
+    "concurrently": "^9.1.0",
+    "rm-rs": "^0.2.3"
   },
   "peerDependencies": {
     "react": "^18.3.1"
