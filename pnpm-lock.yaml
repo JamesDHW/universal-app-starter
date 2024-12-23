@@ -190,9 +190,6 @@ importers:
 
   apps/next:
     dependencies:
-      '@client/ui':
-        specifier: workspace:*
-        version: link:../../packages/client/ui
       next:
         specifier: 15.1.2
         version: 15.1.2(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -224,6 +221,31 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
+
+  packages/client/atoms:
+    dependencies:
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+    devDependencies:
+      '@babel/cli':
+        specifier: ^7.26.4
+        version: 7.26.4(@babel/core@7.26.0)
+      '@client/config-babel':
+        specifier: workspace:*
+        version: link:../config/babel
+      '@config/tsconfig':
+        specifier: workspace:*
+        version: link:../../shared/config/tsconfig
+      '@types/react':
+        specifier: ^19.0.1
+        version: 19.0.2
+      concurrently:
+        specifier: ^9.1.0
+        version: 9.1.0
+      rm-rs:
+        specifier: ^0.2.3
+        version: 0.2.3
 
   packages/client/config/babel:
     devDependencies:
@@ -262,31 +284,6 @@ importers:
         version: 1.1.6(@babel/core@7.26.0)
 
   packages/client/core: {}
-
-  packages/client/ui:
-    dependencies:
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-    devDependencies:
-      '@babel/cli':
-        specifier: ^7.26.4
-        version: 7.26.4(@babel/core@7.26.0)
-      '@client/config-babel':
-        specifier: workspace:*
-        version: link:../config/babel
-      '@config/tsconfig':
-        specifier: workspace:*
-        version: link:../../shared/config/tsconfig
-      '@types/react':
-        specifier: ^19.0.1
-        version: 19.0.2
-      concurrently:
-        specifier: ^9.1.0
-        version: 9.1.0
-      rm-rs:
-        specifier: ^0.2.3
-        version: 0.2.3
 
   packages/shared/config/tsconfig: {}
 
@@ -1688,7 +1685,7 @@ packages:
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {node: '>=0.10.0'}
+    engines: {'0': node >=0.10.0}
 
   '@expo/cli@0.22.7':
     resolution: {integrity: sha512-aNrUPVFPdIX42Q6UM6qygrN4DUqnXMDS1CnkTfNFVIZWRiJ1TUA05Zk6aF35M674CKd/c/dWHFjmbgjsyN/hEA==}
@@ -8560,9 +8557,6 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.1:
-    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
-
   shell-quote@1.8.2:
     resolution: {integrity: sha512-AzqKpGKjrj7EM6rKVQEPpB288oCfnrEIuyoT9cyF4nmGa7V8Zk6f7RRqYisX8X9m+Q7bd632aZW4ky7EhbQztA==}
     engines: {node: '>= 0.4'}
@@ -14849,7 +14843,7 @@ snapshots:
       chalk: 4.1.2
       lodash: 4.17.21
       rxjs: 7.8.1
-      shell-quote: 1.8.1
+      shell-quote: 1.8.2
       supports-color: 8.1.1
       tree-kill: 1.2.2
       yargs: 17.7.2
@@ -17733,7 +17727,7 @@ snapshots:
   launch-editor@2.9.1:
     dependencies:
       picocolors: 1.1.1
-      shell-quote: 1.8.1
+      shell-quote: 1.8.2
 
   leven@3.1.0: {}
 
@@ -19821,7 +19815,7 @@ snapshots:
       prompts: 2.4.2
       react-error-overlay: 6.0.11
       recursive-readdir: 2.2.3
-      shell-quote: 1.8.1
+      shell-quote: 1.8.2
       strip-ansi: 6.0.1
       text-table: 0.2.0
       webpack: 5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))
@@ -20673,8 +20667,6 @@ snapshots:
   shebang-regex@1.0.0: {}
 
   shebang-regex@3.0.0: {}
-
-  shell-quote@1.8.1: {}
 
   shell-quote@1.8.2: {}
 
