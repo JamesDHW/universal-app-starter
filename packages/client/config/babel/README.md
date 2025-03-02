@@ -4,7 +4,7 @@ Shared Babel configuration for client projects.
 
 ## Philosophy
 
-Babel is a transpiler–not a bundle–which means that the transient consumers of this package (i.e. `/apps`) must configure their own bundler for features like tree-shaking to work.
+Babel is a _transpiler_–not a bundler–which means that the transitive consumers of this package (i.e. `/apps`) must configure their own bundler for features like tree-shaking to work.
 
 `cjs` and `esm` are two different formats, and this package aims to support `esm` for consistency across packages in this monorepo.
 

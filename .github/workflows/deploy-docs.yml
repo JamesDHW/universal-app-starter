@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - '.github/**'
-      - 'docs/**'
+      - 'apps/docusaurus/**'
       - '**/docs.md'
       - '**/README.md'
 
@@ -15,16 +15,13 @@ jobs:
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Reuse the centralized setup workflow
       - name: Setup Node.js and pnpm
         uses: ./.github/actions/setup
 
-      # Install dependencies and build the site
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
         working-directory: apps/docusaurus
@@ -33,7 +30,6 @@ jobs:
         run: pnpm build
         working-directory: apps/docusaurus
 
-      # Upload the build artifact for deployment
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -43,19 +39,16 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build-docs
 
-    # Grant GITHUB_TOKEN the necessary permissions
     permissions:
       pages: write
       id-token: write
 
-    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
     steps:
-      # Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
